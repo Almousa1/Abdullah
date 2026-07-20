@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>عبدالله الأحمد الموسى — مطور .NET</title>
+  <meta name="description" content="Abdullah Ahmad AlMousa — Junior .NET Developer. C#, ASP.NET Core MVC, Entity Framework Core, SQL Server. Portfolio with selected projects and technical skills." />
+  <meta name="author" content="Abdullah Ahmad AlMousa" />
+  <meta name="theme-color" content="#0b1120" />
+
+  <!-- ===== Open Graph / SEO ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="عبدالله الأحمد الموسى — مطور .NET" />
+  <meta property="og:description" content="Junior .NET Developer — C#, ASP.NET Core MVC, Entity Framework Core, SQL Server. Selected projects, skills, and resume." />
+  <meta property="og:image" content="assets/img/og.svg" />
+  <!-- TODO: replace with your live URL, e.g. https://<user>.github.io/<repo>/ -->
+  <meta property="og:url" content="./" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="عبدالله الأحمد الموسى — مطور .NET" />
+  <meta name="twitter:description" content="Junior .NET Developer — C#, ASP.NET Core MVC, EF Core, SQL Server." />
+  <meta name="twitter:image" content="assets/img/og.svg" />
+  <link rel="alternate" hreflang="ar" href="./" />
+  <link rel="alternate" hreflang="en" href="./" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+  <!-- ===== Structured data (JSON-LD) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abdullah Ahmad AlMousa",
+    "jobTitle": ".NET Developer",
+    "url": "./",
+    "email": "abdullah.a.hussain.a@gmail.com",
+    "sameAs": ["https://www.linkedin.com/in/abdullah-almousa"],
+    "alumniOf": "King Faisal University",
+    "knowsAbout": ["C#", "ASP.NET Core MVC", "Entity Framework Core", "SQL Server"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#home" data-i18n="skip">تخطَّ إلى المحتوى</a>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="brand" href="#home">
+        <span class="brand__mark">A</span>
+        <span class="brand__name" data-bind="brandName">عبدالله الموسى</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="القائمة" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__links" id="navLinks" aria-label="التنقل الرئيسي">
+        <a href="#home" data-nav="home" data-i18n="nav.home">الرئيسية</a>
+        <a href="#about" data-nav="about" data-i18n="nav.about">عنّي</a>
+        <a href="#projects" data-nav="projects" data-i18n="nav.projects">المشاريع</a>
+        <a href="#skills" data-nav="skills" data-i18n="nav.skills">المهارات</a>
+        <a href="#resume" data-nav="resume" data-i18n="nav.resume">السيرة</a>
+        <a href="#contact" data-nav="contact" data-i18n="nav.contact">تواصل</a>
+        <a class="btn btn--ghost nav__cv" href="assets/cv/Abdullah-AlMousa-CV.pdf" download data-i18n="nav.cv">تحميل السيرة</a>
+        <button class="lang-switch" id="langSwitch" type="button" aria-label="تبديل اللغة">EN</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+      <div class="hero__glow"></div>
+      <div class="container hero__inner">
+        <div class="hero__avatar" aria-hidden="true">عـ</div>
+        <span class="hero__status"><span class="dot"></span><span data-i18n="hero.status">متاح للعمل</span></span>
+        <p class="hero__eyebrow" data-bind="hero.eyebrow">مرحبًا، أنا</p>
+        <h1 class="hero__name" data-bind="hero.name">عبدالله أحمد الموسى</h1>
+        <p class="hero__role" data-bind="hero.role">مطوّر .NET</p>
+        <p class="hero__bio" data-bind="hero.bio"></p>
+
+        <ul class="hero__stats" data-bind="hero.stats"></ul>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#projects" data-i18n="hero.ctaProjects">استعرض مشاريعي</a>
+          <a class="btn btn--ghost" href="#contact" data-i18n="hero.ctaContact">تواصل معي</a>
+        </div>
+        <ul class="hero__socials" data-bind="hero.socials"></ul>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section reveal" id="about">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__tag" data-i18n="about.tag">عنّي</span>
+          <h2 class="section__title" data-bind="about.title">نظرة سريعة</h2>
+        </div>
+        <div class="about__grid">
+          <div class="about__text">
+            <p data-bind="about.bio"></p>
+            <p data-bind="about.experience"></p>
+            <p data-bind="about.education"></p>
+          </div>
+          <div class="about__approach card">
+            <h3 data-i18n="about.approachTitle">منهجيتي</h3>
+            <p data-bind="about.approach"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section section--alt reveal" id="projects">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__tag" data-i18n="projects.tag">أعمال منتقاة</span>
+          <h2 class="section__title" data-i18n="projects.title">مشاريعي</h2>
+        </div>
+        <div class="projects__grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="section reveal" id="skills">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__tag" data-i18n="skills.tag">أدواتي</span>
+          <h2 class="section__title" data-i18n="skills.title">المهارات التقنية</h2>
+        </div>
+        <div id="skillsWrap"></div>
+      </div>
+    </section>
+
+    <!-- ===== RESUME ===== -->
+    <section class="section section--alt reveal" id="resume">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__tag" data-i18n="resume.tag">مسيرتي</span>
+          <h2 class="section__title" data-i18n="resume.title">السيرة الذاتية</h2>
+        </div>
+        <div class="resume__timeline" id="resumeTimeline"></div>
+        <div class="resume__cta">
+          <a class="btn btn--primary" href="assets/cv/Abdullah-AlMousa-CV.pdf" download data-i18n="resume.download">تحميل السيرة الكاملة (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section reveal" id="contact">
+      <div class="container contact__inner">
+        <div class="section__head">
+          <span class="section__tag" data-i18n="contact.tag">لنبدأ حوارًا</span>
+          <h2 class="section__title" data-i18n="contact.title">تواصل معي</h2>
+        </div>
+        <p class="contact__lead" data-bind="contact.lead"></p>
+
+        <form class="contact__form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="cName" data-i18n="contact.name">الاسم</label>
+            <input id="cName" name="name" type="text" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="cEmail" data-i18n="contact.email">البريد الإلكتروني</label>
+            <input id="cEmail" name="email" type="email" required autocomplete="email" />
+          </div>
+          <div class="field field--full">
+            <label for="cMessage" data-i18n="contact.message">الرسالة</label>
+            <textarea id="cMessage" name="message" rows="5" required></textarea>
+          </div>
+          <div class="field field--full contact__submit">
+            <button class="btn btn--primary" type="submit" data-i18n="contact.send">إرسال الرسالة</button>
+            <span class="form-status" id="formStatus" role="status" aria-live="polite"></span>
+          </div>
+        </form>
+
+        <p class="contact__direct">
+          <span data-i18n="contact.direct">أو راسلني مباشرة على</span>
+          <a data-bind="contact.email" href="mailto:abdullah.a.hussain.a@gmail.com">abdullah.a.hussain.a@gmail.com</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span data-bind="footer.copy"></span>
+      <ul class="footer__socials" data-bind="footer.socials"></ul>
+      <a href="#home" data-i18n="footer.top">العودة للأعلى ↑</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
