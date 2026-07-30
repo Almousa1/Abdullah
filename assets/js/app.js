@@ -75,6 +75,50 @@ const DATA = {
   },
   projects: [
     {
+      title: { ar: "منصة خبرتك لإدارة التدريب", en: "Khbrtik Internship Management Platform" },
+      category: { ar: "تطبيق ويب", en: "Web Application" },
+      role: { ar: "متدرب هندسة برمجيات / مطور .NET", en: "Software Engineering Intern / .NET Developer" },
+      description: {
+        ar: "ساهمت في تطوير وصيانة منصة ويب لإدارة التدريب، تُستخدم لمعالجة طلبات الطلاب، وتوزيعهم على الشركات، وإدارة إجراءات التدريب من البداية إلى النهاية.",
+        en: "Contributed to developing and maintaining a web-based internship management platform for handling student applications, company placements, and end-to-end internship workflows."
+      },
+      challenge: {
+        ar: "احتاجت المنصة إلى إدارة موثوقة لمراحل متعددة في سير عمل التدريب، وعمليات تعتمد على الأدوار، واتساق عالٍ في قاعدة البيانات، مع الحفاظ على واجهات متجاوبة وقابلة للصيانة.",
+        en: "The platform required reliable handling of multiple internship workflow stages, role-based operations, and database consistency while keeping the UI responsive and maintainable."
+      },
+      solution: {
+        ar: "قمت ببناء وصيانة مكونات التطبيق باستخدام ASP.NET Core MVC وEF Core، وتصميم جداول وعلاقات واستعلامات قاعدة البيانات في SQL Server، وتطوير واجهات متجاوبة وفق تصاميم Figma، وتحسين الاعتمادية عبر الاختبار وتصحيح الأخطاء مع الالتزام بمعمارية MVC ونمط Repository.",
+        en: "Built and maintained application components using ASP.NET Core MVC and EF Core, designed relational database structures and queries in SQL Server, implemented responsive UI based on Figma designs, and improved reliability through debugging and testing while following MVC and Repository Pattern practices."
+      },
+      skillIDs: ["C#", "ASP.NET Core MVC", "Entity Framework Core", "SQL Server", "LINQ", "HTML", "CSS", "Bootstrap", "MVC Architecture", "Repository Pattern"],
+      impact: {
+        ar: ["أتمتة سير عمل التدريب بالكامل", "واجهات متجاوبة وفق مواصفات Figma", "اتساق عالٍ للبيانات في SQL Server"],
+        en: ["End-to-end internship workflow automated", "Figma-accurate responsive UI", "High data consistency in SQL Server"]
+      }
+    },
+    {
+      title: { ar: "نظام حجز وإدارة صُنّاع المحتوى", en: "Content Creators Booking & Management System" },
+      category: { ar: "تطبيق ويب متكامل", en: "Full-Stack Web Application" },
+      role: { ar: "مطور .NET متكامل", en: "Full-Stack .NET Developer" },
+      description: {
+        ar: "طورت نظاماً متكاملاً للحجز وإدارة سير العمل لمعالجة الجدولة والموافقات والإجراءات التشغيلية الخاصة بإدارة صُنّاع المحتوى.",
+        en: "Developed a full-stack booking and workflow management system to handle scheduling, approvals, and operational processes for content creator management."
+      },
+      challenge: {
+        ar: "كان مطلوباً من النظام دعم أدوار متعددة بصلاحيات مختلفة، وواجهات ثنائية اللغة (RTL/LTR)، مع تبسيط مسارات الموافقة والتحقق دون خلق اختناقات تشغيلية.",
+        en: "The system needed to support multiple user roles with distinct permissions, bilingual interfaces (RTL/LTR), and streamlined approval/validation flows without introducing process bottlenecks."
+      },
+      solution: {
+        ar: "نفذت آليات وصول مبنية على الأدوار لمسارات عمل Admin وManager وContent Creator، وبنيت تجربة مستخدم متعددة اللغات تدعم RTL/LTR، كما قمت بأتمتة خطوات الموافقة والتحقق لرفع كفاءة العمليات وإدارة المستخدمين.",
+        en: "Implemented role-based access control workflows for Admin, Manager, and Content Creator roles, built multilingual UX with RTL/LTR support, and automated approval and validation steps to improve process efficiency and user management."
+      },
+      skillIDs: ["C#", "ASP.NET Core MVC", "Entity Framework Core", "SQL Server", "JavaScript", "HTML", "CSS", "Bootstrap", "MVC Architecture"],
+      impact: {
+        ar: ["صلاحيات بأدوار (Admin/Manager/Creator)", "دعم RTL/LTR ثنائي اللغة", "أتمتة الموافقات والتحقق"],
+        en: ["Role-based access (Admin/Manager/Creator)", "Bilingual RTL/LTR support", "Automated approvals & validation"]
+      }
+    },
+    {
       title: { ar: "تكلوفلو", en: "TaskFlow" },
       category: { ar: "تطبيق ويب", en: "Web Application" },
       role: { ar: "مطور .NET", en: ".NET Developer" },
