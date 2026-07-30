@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>عبدالله الأحمد الموسى — مطور .NET</title>
+  <title>عبدالله أحمد الموسى — مطور .NET</title>
   <meta name="description" content="Abdullah Ahmad AlMousa — Junior .NET Developer. C#, ASP.NET Core MVC, Entity Framework Core, SQL Server. Portfolio with selected projects and technical skills." />
   <meta name="author" content="Abdullah Ahmad AlMousa" />
   <meta name="theme-color" content="#0b1120" />
 
   <!-- ===== Open Graph / SEO ===== -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="عبدالله الأحمد الموسى — مطور .NET" />
+  <meta property="og:title" content="عبدالله أحمد الموسى — مطور .NET" />
   <meta property="og:description" content="Junior .NET Developer — C#, ASP.NET Core MVC, Entity Framework Core, SQL Server. Selected projects, skills, and resume." />
   <meta property="og:image" content="assets/img/og.svg" />
   <!-- TODO: replace with your live URL, e.g. https://<user>.github.io/<repo>/ -->
   <meta property="og:url" content="./" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="عبدالله الأحمد الموسى — مطور .NET" />
+  <meta name="twitter:title" content="عبدالله أحمد الموسى — مطور .NET" />
   <meta name="twitter:description" content="Junior .NET Developer — C#, ASP.NET Core MVC, EF Core, SQL Server." />
   <meta name="twitter:image" content="assets/img/og.svg" />
   <link rel="alternate" hreflang="ar" href="./" />
@@ -76,14 +76,15 @@
     <section class="hero" id="home">
       <div class="hero__glow"></div>
       <div class="container hero__inner">
-        <div class="hero__avatar" aria-hidden="true">عـ</div>
+        <div class="hero__avatar">
+          <span class="hero__avatar-initials" aria-hidden="true">عـ</span>
+          <img class="hero__avatar-img" src="assets/img/photo.jpg" alt="عبدالله أحمد الموسى" onerror="this.remove()" />
+        </div>
         <span class="hero__status"><span class="dot"></span><span data-i18n="hero.status">متاح للعمل</span></span>
         <p class="hero__eyebrow" data-bind="hero.eyebrow">مرحبًا، أنا</p>
         <h1 class="hero__name" data-bind="hero.name">عبدالله أحمد الموسى</h1>
         <p class="hero__role" data-bind="hero.role">مطوّر .NET</p>
         <p class="hero__bio" data-bind="hero.bio"></p>
-
-        <ul class="hero__stats" data-bind="hero.stats"></ul>
 
         <div class="hero__actions">
           <a class="btn btn--primary" href="#projects" data-i18n="hero.ctaProjects">استعرض مشاريعي</a>
@@ -122,6 +123,15 @@
           <h2 class="section__title" data-i18n="projects.title">مشاريعي</h2>
         </div>
         <div class="projects__grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== POST-PROJECTS CTA ===== -->
+    <section class="cta-band reveal" id="cta">
+      <div class="container cta-band__inner">
+        <h2 class="cta-band__title" data-i18n="cta.title">أعجبك شيء من أعمالي؟</h2>
+        <p class="cta-band__text" data-i18n="cta.text">أنا جاهز لفرصة عمل أو تعاون — خلنا نتحدث.</p>
+        <a class="btn btn--primary" href="#contact" data-i18n="cta.btn">تواصل معي</a>
       </div>
     </section>
 
@@ -181,6 +191,7 @@
         <p class="contact__direct">
           <span data-i18n="contact.direct">أو راسلني مباشرة على</span>
           <a data-bind="contact.email" href="mailto:abdullah.a.hussain.a@gmail.com">abdullah.a.hussain.a@gmail.com</a>
+          <button class="copy-btn" id="copyEmail" type="button" data-i18n="contact.copy">نسخ الإيميل</button>
         </p>
       </div>
     </section>

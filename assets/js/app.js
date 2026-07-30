@@ -8,8 +8,8 @@ const DATA = {
   brandName: { ar: "عبدالله الموسى", en: "Abdullah Almousa" },
   meta: {
     email: "abdullah.a.hussain.a@gmail.com",
-    linkedin: "https://www.linkedin.com/in/abdullah-almousa",
-    github: "https://github.com/"
+    linkedin: "https://www.linkedin.com/in/abdullah-a-almousa",
+    github: "https://github.com/Almousa1"
   },
   ui: {
     skip: { ar: "تخطَّ إلى المحتوى", en: "Skip to content" },
@@ -19,7 +19,7 @@ const DATA = {
     "nav.skills": { ar: "المهارات", en: "Skills" },
     "nav.resume": { ar: "السيرة", en: "Resume" },
     "nav.contact": { ar: "تواصل", en: "Contact" },
-    "nav.cv": { ar: "تحميل السيرة", en: "Download CV" },
+    "nav.cv": { ar: "حمّل السيرة", en: "Download CV" },
     "hero.ctaProjects": { ar: "استعرض مشاريعي", en: "View my projects" },
     "hero.ctaContact": { ar: "تواصل معي", en: "Get in touch" },
     "hero.status": { ar: "متاح للعمل", en: "Open to work" },
@@ -31,14 +31,18 @@ const DATA = {
     "skills.title": { ar: "المهارات التقنية", en: "Technical skills" },
     "resume.tag": { ar: "مسيرتي", en: "Career" },
     "resume.title": { ar: "السيرة الذاتية", en: "Resume" },
-    "resume.download": { ar: "تحميل السيرة الكاملة (PDF)", en: "Download full CV (PDF)" },
+    "resume.download": { ar: "حمّل السيرة الكاملة (PDF)", en: "Download full CV (PDF)" },
     "contact.tag": { ar: "لنبدأ حوارًا", en: "Let's talk" },
     "contact.title": { ar: "تواصل معي", en: "Contact me" },
     "contact.name": { ar: "الاسم", en: "Name" },
     "contact.email": { ar: "البريد الإلكتروني", en: "Email" },
     "contact.message": { ar: "الرسالة", en: "Message" },
-    "contact.send": { ar: "إرسال الرسالة", en: "Send message" },
+    "contact.send": { ar: "أرسل الرسالة", en: "Send message" },
     "contact.direct": { ar: "أو راسلني مباشرة على", en: "Or email me directly at" },
+    "contact.copy": { ar: "انسخ الإيميل", en: "Copy email" },
+    "cta.title": { ar: "أعجبك شيء من أعمالي؟", en: "Like what you see?" },
+    "cta.text": { ar: "أنا جاهز لفرصة عمل أو تعاون — خلنا نتحدث.", en: "I'm open to a job or collaboration — let's talk." },
+    "cta.btn": { ar: "تواصل معي", en: "Get in touch" },
     "footer.top": { ar: "العودة للأعلى ↑", en: "Back to top ↑" }
   },
   hero: {
@@ -48,13 +52,7 @@ const DATA = {
     bio: {
       ar: "مطوّر .NET  بخبرة عملية في بناء تطبيقات الويب والحلول المعتمدة على قواعد البيانات باستخدام C# وASP.NET Core MVC وEntity Framework Core وSQL Server.",
       en: " .NET Developer with hands-on experience building web applications and database-driven solutions using C#, ASP.NET Core MVC, Entity Framework Core, and SQL Server."
-    },
-    stats: [
-      { value: "2+", label: { ar: "مشاريع مختارة", en: "Selected projects" } },
-      { value: "15", label: { ar: "مهارة تقنية", en: "Tech skills" } },
-      { value: ".NET", label: { ar: "التركيز التقني", en: "Core focus" } },
-      { value: "2026", label: { ar: "سنة التخرج", en: "Grad year" } }
-    ]
+    }
   },
   about: {
     title: { ar: "نظرة سريعة", en: "A quick look" },
@@ -77,47 +75,41 @@ const DATA = {
   },
   projects: [
     {
-      title: { ar: "منصة خبرتك لإدارة التدريب", en: "Khbrtik Internship Management Platform" },
+      title: { ar: "تكلوفلو", en: "TaskFlow" },
       category: { ar: "تطبيق ويب", en: "Web Application" },
-      role: { ar: "متدرب هندسة برمجيات / مطور .NET", en: "Software Engineering Intern / .NET Developer" },
+      role: { ar: "مطور .NET", en: ".NET Developer" },
       description: {
-        ar: "ساهمت في تطوير وصيانة منصة ويب لإدارة التدريب، تُستخدم لمعالجة طلبات الطلاب، وتوزيعهم على الشركات، وإدارة إجراءات التدريب من البداية إلى النهاية.",
-        en: "Contributed to developing and maintaining a web-based internship management platform for handling student applications, company placements, and end-to-end internship workflows."
+        ar: "تطبيق ويب ثنائي اللغة لإدارة المهام مبني على ASP.NET Core MVC.",
+        en: "A bilingual (English/Arabic) task management web application built with ASP.NET Core MVC."
       },
-      challenge: {
-        ar: "احتاجت المنصة إلى إدارة موثوقة لمراحل متعددة في سير عمل التدريب، وعمليات تعتمد على الأدوار، واتساق عالٍ في قاعدة البيانات، مع الحفاظ على واجهات متجاوبة وقابلة للصيانة.",
-        en: "The platform required reliable handling of multiple internship workflow stages, role-based operations, and database consistency while keeping the UI responsive and maintainable."
-      },
+      challenge: { ar: "", en: "" },
       solution: {
-        ar: "قمت ببناء وصيانة مكونات التطبيق باستخدام ASP.NET Core MVC وEF Core، وتصميم جداول وعلاقات واستعلامات قاعدة البيانات في SQL Server، وتطوير واجهات متجاوبة وفق تصاميم Figma، وتحسين الاعتمادية عبر الاختبار وتصحيح الأخطاء مع الالتزام بمعمارية MVC ونمط Repository.",
-        en: "Built and maintained application components using ASP.NET Core MVC and EF Core, designed relational database structures and queries in SQL Server, implemented responsive UI based on Figma designs, and improved reliability through debugging and testing while following MVC and Repository Pattern practices."
+        ar: "إدارة المهام بإنشاء وتعديل وحذف وتصفية وبحث ومستويات أولوية. إدارة المشاريع والتصنيفات مع ترميز بالألوان. لوحة تحكم الإدارة لإدارة أدوار المستخدمين وحالات المهام. توطين ثنائي اللغة كامل مع دعم تخطيط RTL. المصادقة والتفويض مع قائمة تحكم مبنية على الأدوار.",
+        en: "Task Management with CRUD, filtering, search, and priority levels. Project and Category Management with color-coding. Admin Panel for managing user roles and task statuses. Full Bilingual Localization with RTL layout support. Authentication and Authorization with role-based access."
       },
-      skillIDs: ["C#", "ASP.NET Core MVC", "Entity Framework Core", "SQL Server", "LINQ", "HTML", "CSS", "Bootstrap", "MVC Architecture", "Repository Pattern"],
-      impact: {
-        ar: ["أتمتة سير عمل التدريب بالكامل", "واجهات متجاوبة وفق مواصفات Figma", "اتساق عالٍ للبيانات في SQL Server"],
-        en: ["End-to-end internship workflow automated", "Figma-accurate responsive UI", "High data consistency in SQL Server"]
-      }
+      skillIDs: ["C#", ".NET 8", "ASP.NET Core MVC", "Entity Framework Core", "SQL Server"],
+      impact: { ar: [], en: [] }
     },
     {
-      title: { ar: "نظام حجز وإدارة صُنّاع المحتوى", en: "Content Creators Booking & Management System" },
-      category: { ar: "تطبيق ويب متكامل", en: "Full-Stack Web Application" },
-      role: { ar: "مطور .NET متكامل", en: "Full-Stack .NET Developer" },
+      title: { ar: "برف إنسايت", en: "PerfInsight" },
+      category: { ar: "منصة ويب", en: "Web Platform" },
+      role: { ar: "مطور .NET", en: ".NET Developer" },
       description: {
-        ar: "طورت نظاماً متكاملاً للحجز وإدارة سير العمل لمعالجة الجدولة والموافقات والإجراءات التشغيلية الخاصة بإدارة صُنّاع المحتوى.",
-        en: "Developed a full-stack booking and workflow management system to handle scheduling, approvals, and operational processes for content creator management."
+        ar: "منصة ثنائية اللغة وثيمات مزدوجة لتحديد مؤشرات الأداء وتقييم الكفاءات والمراجعات القائمة على الأدلة.",
+        en: "A bilingual dual-theme .NET 8 platform for KPI tracking, competency assessment, and evidence-based performance reviews."
       },
       challenge: {
-        ar: "كان مطلوباً من النظام دعم أدوار متعددة بصلاحيات مختلفة، وواجهات ثنائية اللغة (RTL/LTR)، مع تبسيط مسارات الموافقة والتحقق دون خلق اختناقات تشغيلية.",
-        en: "The system needed to support multiple user roles with distinct permissions, bilingual interfaces (RTL/LTR), and streamlined approval/validation flows without introducing process bottlenecks."
+        ar: "تواجه المنشآت التي تجري تقييمات دورية الأداء صعوبة في تحديد مؤشرات الأداء وجمع الأدلة وتسجيل التقييمات بشكل متسق عبر الأدوار واللغات.",
+        en: "Organizations running periodic employee performance evaluations struggle to define KPIs, collect evidence, and score reviews consistently across roles and languages."
       },
       solution: {
-        ar: "نفذت آليات وصول مبنية على الأدوار لمسارات عمل Admin وManager وContent Creator، وبنيت تجربة مستخدم متعددة اللغات تدعم RTL/LTR، كما قمت بأتمتة خطوات الموافقة والتحقق لرفع كفاءة العمليات وإدارة المستخدمين.",
-        en: "Implemented role-based access control workflows for Admin, Manager, and Content Creator roles, built multilingual UX with RTL/LTR support, and automated approval and validation steps to improve process efficiency and user management."
+        ar: "أربع مساحات عمل مبنية على الأدوار للمدير والمنشأة والقسم والموظف. تسجيل موزون لمؤشرات الأداء والكفاءات مع التحقق من الأدلة. واجهة ثنائية اللغة بالعربية والإنجليزية مع تبديل تلقائي للاتجاه. نظام ثيمات فاتح وداكن قابل للتبديل من أي صفحة ومحفوظ في المتصفح. إشعارات فورية عبر SignalR لـ NotificationHub. إدارة قابلة للتدقيق مع إدارة مركزية للقوائم مثل الحالات والأولويات والفئات والأدوار.",
+        en: "Four role-based workspaces for Admin, Organization, Department, and Employee. Weighted KPI and competency scoring with evidence verification. Bilingual Arabic and English interface with automatic RTL/LTR switching. Dual light/dark theme system toggled from any page and persisted to localStorage. Real-time notifications via SignalR NotificationHub. Auditable administration with centralized lookup management for statuses, priorities, categories, and roles."
       },
-      skillIDs: ["C#", "ASP.NET Core MVC", "Entity Framework Core", "SQL Server", "JavaScript", "HTML", "CSS", "Bootstrap", "MVC Architecture"],
+      skillIDs: ["C#", ".NET 8", "ASP.NET Core MVC", "Entity Framework Core", "SQL Server", "SignalR", "Bootstrap", "ApexCharts", "DataTables", "Select2", "SweetAlert2"],
       impact: {
-        ar: ["صلاحيات بأدوار (Admin/Manager/Creator)", "دعم RTL/LTR ثنائي اللغة", "أتمتة الموافقات والتحقق"],
-        en: ["Role-based access (Admin/Manager/Creator)", "Bilingual RTL/LTR support", "Automated approvals & validation"]
+        ar: ["يمكّن المنشآت من إجراء التقييمات الشاملة للأداء عبر الأدوار واللغات بإصدار موثّق ومعتمد على الأدلة."],
+        en: ["Enables organizations to run end-to-end performance reviews across roles and languages with auditable, evidence-based scoring."]
       }
     }
   ],
@@ -136,18 +128,24 @@ const DATA = {
     { name: "Visual Studio", nameAr: "فيجوال ستوديو", category: "Tools", categoryAr: "الأدوات", proficiency: 4 },
     { name: "MVC Architecture", nameAr: "معمارية إم في سي", category: "Software Design", categoryAr: "تصميم البرمجيات", proficiency: 4 },
     { name: "Repository Pattern", nameAr: "نمط المستودع", category: "Software Design", categoryAr: "تصميم البرمجيات", proficiency: 4 },
-    { name: "LINQ", nameAr: "لينك", category: "Frameworks & Technologies", categoryAr: "الأطر والتقنيات", proficiency: 4 }
+    { name: "LINQ", nameAr: "لينك", category: "Frameworks & Technologies", categoryAr: "الأطر والتقنيات", proficiency: 4 },
+    { name: ".NET 8", nameAr: ".نت ٨", category: "Frameworks & Technologies", categoryAr: "الأطر والتقنيات", proficiency: 4 },
+    { name: "SignalR", nameAr: "سيغنال آر", category: "Frameworks & Technologies", categoryAr: "الأطر والتقنيات", proficiency: 4 },
+    { name: "ApexCharts", nameAr: "أبيكس تشارتس", category: "Tools", categoryAr: "الأدوات", proficiency: 4 },
+    { name: "DataTables", nameAr: "داتا تيبلز", category: "Tools", categoryAr: "الأدوات", proficiency: 4 },
+    { name: "Select2", nameAr: "سيكت تو", category: "Tools", categoryAr: "الأدوات", proficiency: 4 },
+    { name: "SweetAlert2", nameAr: "سويت ألرت تو", category: "Tools", categoryAr: "الأدوات", proficiency: 4 }
   ],
   resume: [
     {
       type: { ar: "خبرة", en: "Experience" },
-      title: { ar: "متدرب هندسة برمجيات", en: "Software Engineering Intern" },
+      title: { ar: "مطوّر فل-ستاك تعاوني", en: "Full-Stack Development Co-op" },
       organization: { ar: "عمادة تقنية المعلومات، جامعة الملك فيصل", en: "Deanship of Information Technology, King Faisal University" },
       description: {
-        ar: "طورت ميزات لمنصة خبرتك للتدريب، وصنت مكونات ASP.NET Core MVC، وصممت هياكل قاعدة بيانات SQL Server، ونفذت واجهات متجاوبة، وحسنت الاعتمادية عبر الاختبار وتصحيح الأخطاء.",
-        en: "Developed features for the Khbrtik internship platform, maintained ASP.NET Core MVC components, designed SQL Server database structures, implemented responsive UI, and improved reliability through testing and debugging."
+        ar: "صمّمت وطوّرت نظام إدارة جامعي متعدد الأدوار باستخدام ASP.NET Core MVC وEntity Framework Core وSQL Server، ونفّذت ميزات شاملة لوحدات الطلاب والشركات والإدارة على مدار 24 أسبوعًا.<br>بنيت أكثر من 10 وحدات ميزات تشمل التسجيل وإدارة المشاريع وتدفقات العمل وتقديم الملفات والتنبيهات الفورية عبر البريد الإلكتروني (SMTP).<br>طبّقت نمط Repository مع Entity Framework Core لفصل طبقة الوصول إلى البيانات عن المنطق التجاري، مما حسّن صيانة الكود ودعّم العمليات غير المتزامنة وتصفية الحذف الناعم.<br>صُمّمت واجهات مستخدم ثنائية اللغة (الإنجليزية/العربية) مع التحقق من النماذج وأهمية إمكانية الوصول والتخطيطات المتجاوبة.<br>أجريت مراجعات كود شاملة واختبارات ارتدادية عبر جميع الوحدات، ووثّقت المشاكل وتعاونت مع الفريق لحلّ العيوب الحرجة.",
+        en: "Designed and developed a multi-role university management system using ASP.NET Core MVC, Entity Framework Core, and SQL Server, delivering end-to-end features across student, company, and administrative modules over a 24-week co-op.<br>Built 10+ feature modules including student registration, project management, task application workflows, file submission handling, and real-time notification systems with email integration via SMTP.<br>Implemented the Repository Pattern with Entity Framework Core to separate data access from business logic, improving code maintainability and enabling async operations with soft-delete filtering.<br>Designed bilingual (English/Arabic) user interfaces with form validation, accessibility considerations, and responsive layouts, ensuring usability across diverse user roles.<br>Conducted comprehensive code reviews, bug identification, and regression testing across all system modules (Admin, Company, Student, College Rep), documenting issues and collaborating with the team to resolve critical defects."
       },
-      start: "2025-06", end: "2025-12"
+      start: "2025-07", end: "2025-10"
     },
     {
       type: { ar: "تعليم", en: "Education" },
@@ -204,10 +202,6 @@ function applyStatic() {
       el.href = "mailto:" + DATA.meta.email;
     } else if (el.dataset.bind === "hero.socials" || el.dataset.bind === "footer.socials") {
       el.innerHTML = socialsHTML();
-    } else if (el.dataset.bind === "hero.stats") {
-      el.innerHTML = (val || []).map((s) =>
-        `<li class="hero__stat"><span class="hero__stat-val">${L(s.value)}</span><span class="hero__stat-label">${L(s.label)}</span></li>`
-      ).join("");
     } else if (Array.isArray(val)) {
       return; // rendered separately
     } else {
@@ -399,6 +393,22 @@ function initReveal() {
   items.forEach((el) => obs.observe(el));
 }
 
+function initCopyEmail() {
+  const btn = document.getElementById("copyEmail");
+  if (!btn) return;
+  btn.addEventListener("click", async () => {
+    const email = DATA.meta.email;
+    try {
+      await navigator.clipboard.writeText(email);
+      const old = btn.textContent;
+      btn.textContent = lang === "ar" ? "تم النسخ ✓" : "Copied ✓";
+      setTimeout(() => (btn.textContent = old), 1800);
+    } catch {
+      btn.textContent = email;
+    }
+  });
+}
+
 function initContactForm() {
   const form = document.getElementById("contactForm");
   const status = document.getElementById("formStatus");
@@ -415,7 +425,7 @@ function initContactForm() {
 
     if (!name || !email || !message) {
       status.className = "form-status err";
-      status.textContent = lang === "ar" ? "الرجاء تعبئة جميع الحقول." : "Please fill in all fields.";
+      status.textContent = lang === "ar" ? "أكمل تعبئة جميع الحقول المطلوبة." : "Please complete all required fields.";
       return;
     }
 
@@ -429,13 +439,13 @@ function initContactForm() {
         if (res.ok) {
           form.reset();
           status.className = "form-status ok";
-          status.textContent = lang === "ar" ? "شكرًا! وصلت رسالتك." : "Thanks! Your message was sent.";
+          status.textContent = lang === "ar" ? "أرسلت رسالتك! سأرد عليك في أقرب وقت." : "Message sent! I'll get back to you soon.";
         } else {
           throw new Error("bad");
         }
       } catch {
         status.className = "form-status err";
-        status.textContent = lang === "ar" ? "تعذّر الإرسال، حاول عبر بريدي مباشرة." : "Could not send, try my email directly.";
+        status.textContent = lang === "ar" ? "عذراً، تعذر إرسال رسالتك. جرّب عبر بريدي المباشر." : "Sorry, could not send. Try my email directly.";
       }
     } else {
       // Zero-config fallback: open the visitor's email client.
@@ -455,5 +465,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initNav();
   initScrollSpy();
   initReveal();
+  initCopyEmail();
   initContactForm();
 });
