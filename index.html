@@ -193,24 +193,13 @@
         </div>
         <p class="contact__lead" data-bind="contact.lead"></p>
 
-        <form class="contact__form" id="contactForm" novalidate>
-          <div class="field">
-            <label for="cName" data-i18n="contact.name">الاسم</label>
-            <input id="cName" name="name" type="text" required autocomplete="name" />
-          </div>
-          <div class="field">
-            <label for="cEmail" data-i18n="contact.email">البريد الإلكتروني</label>
-            <input id="cEmail" name="email" type="email" required autocomplete="email" />
-          </div>
-          <div class="field field--full">
-            <label for="cMessage" data-i18n="contact.message">الرسالة</label>
-            <textarea id="cMessage" name="message" rows="5" required></textarea>
-          </div>
-          <div class="field field--full contact__submit">
-            <button class="btn btn--primary" type="submit" data-i18n="contact.send">إرسال الرسالة</button>
-            <span class="form-status" id="formStatus" role="status" aria-live="polite"></span>
-          </div>
-        </form>
+        <div class="contact__direct-card" data-tilt>
+            <p class="contact__direct-text" data-bind="contact.lead"></p>
+            <a class="btn btn--primary" href="mailto:abdullah.a.hussain.a@gmail.com">
+                abdullah.a.hussain.a@gmail.com
+            </a>
+            <button class="copy-btn" id="copyEmail" type="button" data-i18n="contact.copy">نسخ الإيميل</button>
+        </div>
 
         <p class="contact__direct">
           <span data-i18n="contact.direct">أو راسلني مباشرة على</span>

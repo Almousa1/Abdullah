@@ -315,41 +315,7 @@
   }
 
   // ---------- Contact form ----------
-  function initForm() {
-    const form = $('#contactForm');
-    const status = $('#formStatus');
-    if (!form || !status) return;
-
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const data = new FormData(form);
-      const name = (data.get('name') || '').toString().trim();
-      const email = (data.get('email') || '').toString().trim();
-      const message = (data.get('message') || '').toString().trim();
-
-      status.className = 'form-status';
-
-      if (!name || !email || !message) {
-        status.textContent = currentLang === 'ar' ? 'الرجاء تعبئة جميع الحقول.' : 'Please fill in all fields.';
-        status.classList.add('err');
-        return;
-      }
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        status.textContent = currentLang === 'ar' ? 'البريد الإلكتروني غير صالح.' : 'Invalid email.';
-        status.classList.add('err');
-        return;
-      }
-
-      // mailto fallback (static hosting friendly)
-      const subject = encodeURIComponent(`Portfolio contact — ${name}`);
-      const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
-      window.location.href = `mailto:abdullah.a.hussain.a@gmail.com?subject=${subject}&body=${body}`;
-
-      status.textContent = currentLang === 'ar' ? 'سأفتح بريدك لإكمال الإرسال…' : 'Opening your email client…';
-      status.classList.add('ok');
-      form.reset();
-    });
-  }
+  
 
   // ---------- Copy email ----------
   function initCopy() {
@@ -373,7 +339,6 @@
     applyLang(currentLang);
     initNav();
     initLangSwitch();
-    initForm();
     initCopy();
     initTilt();
     observeReveals();
