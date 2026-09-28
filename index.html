@@ -2,35 +2,27 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>عبدالله أحمد الموسى — مطور .NET</title>
-  <meta name="description" content="Abdullah Ahmad AlMousa — Junior .NET Developer. C#, ASP.NET Core MVC, Entity Framework Core, SQL Server. Portfolio with selected projects and technical skills." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>عبدالله أحمد الموسى — مطوّر .NET</title>
+  <meta name="description" content="Abdullah Ahmad AlMousa — Junior .NET Developer. C#, ASP.NET Core MVC, Entity Framework Core, SQL Server." />
   <meta name="author" content="Abdullah Ahmad AlMousa" />
   <meta name="theme-color" content="#0b1120" />
 
-  <!-- ===== Open Graph / SEO ===== -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="عبدالله أحمد الموسى — مطور .NET" />
-  <meta property="og:description" content="Junior .NET Developer — C#, ASP.NET Core MVC, Entity Framework Core, SQL Server. Selected projects, skills, and resume." />
+  <meta property="og:title" content="عبدالله أحمد الموسى — مطوّر .NET" />
+  <meta property="og:description" content="Junior .NET Developer — C#, ASP.NET Core MVC, EF Core, SQL Server." />
   <meta property="og:image" content="assets/img/og.svg" />
-  <!-- TODO: replace with your live URL, e.g. https://<user>.github.io/<repo>/ -->
   <meta property="og:url" content="./" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="عبدالله أحمد الموسى — مطور .NET" />
-  <meta name="twitter:description" content="Junior .NET Developer — C#, ASP.NET Core MVC, EF Core, SQL Server." />
-  <meta name="twitter:image" content="assets/img/og.svg" />
-  <link rel="alternate" hreflang="ar" href="./" />
-  <link rel="alternate" hreflang="en" href="./" />
+
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
 
-  <!-- ===== Structured data (JSON-LD) ===== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Abdullah Ahmad AlMousa",
     "jobTitle": ".NET Developer",
-    "url": "./",
     "email": "abdullah.a.hussain.a@gmail.com",
     "sameAs": ["https://www.linkedin.com/in/abdullah-almousa"],
     "alumniOf": "King Faisal University",
@@ -40,10 +32,38 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Three.js via import map (ESM, no build step) -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+    }
+  }
+  </script>
 </head>
 <body>
+  <!-- ===== Loading overlay ===== -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <div class="loader__spinner"></div>
+      <p class="loader__text" data-i18n="loader.text">جارٍ تجهيز التجربة…</p>
+    </div>
+  </div>
+
+  <!-- ===== Scroll progress ===== -->
+  <div class="scroll-progress" aria-hidden="true">
+    <span class="scroll-progress__bar" id="scrollProgress"></span>
+  </div>
+
+  <!-- ===== 3D canvas (fixed background) ===== -->
+  <canvas id="webgl" class="webgl" aria-hidden="true"></canvas>
+  <div class="webgl-fallback" aria-hidden="true"></div>
+  <div class="webgl-vignette" aria-hidden="true"></div>
+
   <a class="skip-link" href="#home" data-i18n="skip">تخطَّ إلى المحتوى</a>
 
   <!-- ===== NAV ===== -->
@@ -74,9 +94,8 @@
   <main>
     <!-- ===== HERO ===== -->
     <section class="hero" id="home">
-      <div class="hero__glow"></div>
       <div class="container hero__inner">
-        <div class="hero__avatar">
+        <div class="hero__avatar" data-tilt>
           <span class="hero__avatar-initials" aria-hidden="true">عـ</span>
           <img class="hero__avatar-img" src="assets/img/photo.jpg" alt="عبدالله أحمد الموسى" onerror="this.remove()" />
         </div>
@@ -91,6 +110,11 @@
           <a class="btn btn--ghost" href="#contact" data-i18n="hero.ctaContact">تواصل معي</a>
         </div>
         <ul class="hero__socials" data-bind="hero.socials"></ul>
+
+        <div class="hero__scroll-hint" aria-hidden="true">
+          <span data-i18n="hero.scroll">اسحب للأسفل</span>
+          <div class="hero__scroll-line"></div>
+        </div>
       </div>
     </section>
 
@@ -107,7 +131,7 @@
             <p data-bind="about.experience"></p>
             <p data-bind="about.education"></p>
           </div>
-          <div class="about__approach card">
+          <div class="about__approach card" data-tilt>
             <h3 data-i18n="about.approachTitle">منهجيتي</h3>
             <p data-bind="about.approach"></p>
           </div>
@@ -126,9 +150,9 @@
       </div>
     </section>
 
-    <!-- ===== POST-PROJECTS CTA ===== -->
+    <!-- ===== CTA BAND ===== -->
     <section class="cta-band reveal" id="cta">
-      <div class="container cta-band__inner">
+      <div class="container cta-band__inner" data-tilt>
         <h2 class="cta-band__title" data-i18n="cta.title">أعجبك شيء من أعمالي؟</h2>
         <p class="cta-band__text" data-i18n="cta.text">أنا جاهز لفرصة عمل أو تعاون — خلنا نتحدث.</p>
         <a class="btn btn--primary" href="#contact" data-i18n="cta.btn">تواصل معي</a>
@@ -205,6 +229,9 @@
     </div>
   </footer>
 
-  <script src="assets/js/app.js"></script>
+  <!-- ===== Scripts ===== -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js" defer></script>
+  <script type="module" src="assets/js/three-scene.js"></script>
 </body>
 </html>
